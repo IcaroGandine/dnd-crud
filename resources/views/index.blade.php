@@ -1,5 +1,5 @@
 @extends('templates.template')
 
 @section('content')
-    Weapons Test!
+    <h1> Weapons Test! </h1>
 @endsection

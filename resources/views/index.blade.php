@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="text-center"> Weapons Test! </h1>
 
-    <div class="text-center mb-2 mt-3"> <button type="button" class="btn btn-success">+ Add Weapon +</button> </div>
+    <div class="text-center mb-2 mt-3"> <a href ="{{url("weapons/create")}}"> <button type="button" class="btn btn-success">+ Add Weapon +</button> </a> </div>
 
     <div class="text-center"> 
         <table class="table table-hover">

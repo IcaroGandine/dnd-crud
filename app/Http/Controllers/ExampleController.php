@@ -78,7 +78,8 @@ class ExampleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $weapon = $this->objWeapon->find($id);
+        return view('create', compact('weapon'));
     }
 
     /**
@@ -90,7 +91,16 @@ class ExampleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $edit = $this->objWeapon->where(['id' => $id])->update([
+            'name' => $request->name,
+            'damage' => $request->damage,
+            'weight' => $request->weight,
+            'type' => $request->type,
+            'description' => $request->description,
+        ]);
+
+
+        return redirect('weapons');
     }
 
     /**

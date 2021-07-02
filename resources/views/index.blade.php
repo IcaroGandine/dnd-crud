@@ -36,9 +36,14 @@
                             {{$weapons->damage}}
                         </td>
                         <td>
-                            <a href ="{{url("weapons/$weapons->id")}}">  <button type="button" class="btn btn-primary">View</button></a>
-                            <a href ="{{url("weapons/$weapons->id/edit")}}"><button type="button" class="btn btn-warning">Edit</button> </a> 
-                            <button type="button" class="btn btn-danger">Delete</button>
+                            <div class="row justify-content-center"> 
+                                <div class="col-sm-2"> <a href ="{{url("weapons/$weapons->id")}}">  <button type="button" class="btn btn-primary">View</button></a> </div>
+                                <div class="col-sm-2"> <a href ="{{url("weapons/$weapons->id/edit")}}"><button type="button" class="btn btn-warning">Edit</button> </a>  </div>
+                                <div class="col-sm-2"> <button type="button" class="btn btn-danger">Delete</button> </div>
+                            </div>
+                            
+                            
+                            
                         </td>
                     </tr>
                 @endforeach   

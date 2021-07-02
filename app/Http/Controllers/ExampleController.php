@@ -43,7 +43,19 @@ class ExampleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cad = $this->objWeapon->create([
+            'name' => $request->name,
+            'damage' => $request->damage,
+            'weight' => $request->weight,
+            'type' => $request->type,
+            'description' => $request->description,
+
+
+        ]);
+
+        if ($cad) {
+            return redirect('weapons');
+        }
     }
 
     /**

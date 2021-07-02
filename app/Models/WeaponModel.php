@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WeaponModel extends Model
 {
     protected $table = 'weapon';
+    protected $fillable = ['name', 'damage', 'weight', 'type', 'description'];
+
     use HasFactory;
 }

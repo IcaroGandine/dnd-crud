@@ -14,4 +14,4 @@ use App\Http\Controllers\ExampleController;
 |
 */
 
-Route::resource('/', ExampleController::class);
+Route::resource('/weapons', ExampleController::class);

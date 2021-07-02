@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\WeaponModel;
 
 class ExampleController extends Controller
 {
+    private $objWeapon;
+
+
+    public function __construct()
+    {
+        $this->objWeapon = new WeaponModel();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,8 @@ class ExampleController extends Controller
      */
     public function index()
     {
-        return view("index");
+        $weapon = $this->objWeapon->all();
+        return view("index", compact('weapon'));
     }
 
     /**

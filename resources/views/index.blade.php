@@ -39,7 +39,11 @@
                             <div class="row justify-content-center"> 
                                 <div class="col-sm-2"> <a href ="{{url("weapons/$weapons->id")}}">  <button type="button" class="btn btn-primary">View</button></a> </div>
                                 <div class="col-sm-2"> <a href ="{{url("weapons/$weapons->id/edit")}}"><button type="button" class="btn btn-warning">Edit</button> </a>  </div>
-                                <div class="col-sm-2"> <button type="button" class="btn btn-danger">Delete</button> </div>
+                                <div class="col-sm-2"> <form name="formWeaponDelete" id="formWeaponDelete" method="post" action="{{url("weapons/$weapons->id")}}"> @method("delete") 
+                                    @csrf
+                                     <button type="submit" class="btn btn-danger">Delete</button>
+                                </form> 
+                            </div>
                             </div>
                             
                             

@@ -91,7 +91,7 @@ class ExampleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $edit = $this->objWeapon->where(['id' => $id])->update([
+        $this->objWeapon->where(['id' => $id])->update([
             'name' => $request->name,
             'damage' => $request->damage,
             'weight' => $request->weight,
@@ -111,6 +111,9 @@ class ExampleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $this->objWeapon->find($id);
+        $data->delete();
+
+        return redirect('weapons');
     }
 }

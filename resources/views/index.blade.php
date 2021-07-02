@@ -36,7 +36,7 @@
                             {{$weapons->damage}}
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary">View</button>
+                            <a href ="{{url("weapons/$weapons->id")}}">  <button type="button" class="btn btn-primary">View</button></a>
                             <button type="button" class="btn btn-warning">Edit</button>
                             <button type="button" class="btn btn-danger">Delete</button>
                         </td>

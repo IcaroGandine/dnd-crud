@@ -19,6 +19,7 @@ class CreateWeaponModelsTable extends Migration
             $table->string('damage');
             $table->integer('weight');
             $table->string('type');
+            $table->string('description');
 
             $table->timestamps();
         });

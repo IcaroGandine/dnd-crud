@@ -54,7 +54,8 @@ class ExampleController extends Controller
      */
     public function show($id)
     {
-        //
+        $weapon = $this->objWeapon->find($id);
+        return view('show', compact('weapon'));
     }
 
     /**
